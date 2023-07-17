@@ -4,8 +4,11 @@
   "description": "dtinsight iconfont-manager",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "update": "node scripts/update.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OnlyFlyer/iconfont-manager.git"
@@ -21,6 +24,10 @@
   },
   "homepage": "https://github.com/OnlyFlyer/iconfont-manager#readme",
   "dependencies": {
+    "@inquirer/prompts": "^3.0.0",
     "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
   }
 }
