@@ -15,6 +15,7 @@ select({
 }).then((val) => {
   console.log(val, '--val');
   console.log(VersionNameMap[val], '--VersionNameMap[val]');
+  console.log(`npm version ${VersionNameMap[val]}`, 'commander');
   spawn(`npm version ${VersionNameMap[val]}`, undefined, { shell: true });
 });
 

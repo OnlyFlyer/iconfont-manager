@@ -15,10 +15,8 @@ const choices = consts_1.VersionNums.map((value) => ({
 }).then((val) => {
     console.log(val, '--val');
     console.log(consts_1.VersionNameMap[val], '--VersionNameMap[val]');
-    (0, child_process_1.spawn)(`npm version ${consts_1.VersionNameMap[val]}`, undefined, {
-        // stdio: ''
-        shell: true,
-    });
+    console.log(`npm version ${consts_1.VersionNameMap[val]}`, 'commander');
+    (0, child_process_1.spawn)(`npm version ${consts_1.VersionNameMap[val]}`, undefined, { shell: true });
 });
 // spawn(`npm version ${type} && npm publish`, undefined, {
 //   stdio: 'inherit',
