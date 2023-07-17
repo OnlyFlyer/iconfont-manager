@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/OnlyFlyer/iconfont-manager/issues"
   },
-  "homepage": "https://github.com/OnlyFlyer/iconfont-manager#readme"
+  "homepage": "https://github.com/OnlyFlyer/iconfont-manager#readme",
+  "dependencies": {
+    "commander": "^11.0.0"
+  }
 }
