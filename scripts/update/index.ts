@@ -1,31 +1,21 @@
 import { spawn } from 'child_process';
 import { select } from '@inquirer/prompts';
+import { VersionNums, VersionNameMap } from './consts';
 // const program = require('commander');
+
+const choices = VersionNums.map((value) => ({
+  name: VersionNameMap[value],
+  value,
+  description: 'x.y.z',
+}));
 
 select({
   message: '请选择更新方式?',
-  choices: [
-    {
-      name: 'patch',
-      value: 'z',
-      description: 'x.y.z',
-    },
-    {
-      name: 'minor',
-      value: 'y',
-      description: 'x.y.z',
-    },
-    {
-      name: 'major',
-      value: 'x',
-      description: 'x.y.z',
-    },
-  ],
+  choices,
 }).then((val) => {
-  spawn(`npm version ${val}`, undefined, {
-    // stdio: ''
-    shell: true,
-  });
+  console.log(val, '--val');
+  console.log(VersionNameMap[val], '--VersionNameMap[val]');
+  spawn(`npm version ${VersionNameMap[val]}`, undefined, { shell: true });
 });
 
 
