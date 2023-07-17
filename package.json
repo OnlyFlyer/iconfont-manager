@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "tsc --build --clean",
     "compile": "tsc",
-    "update": "node scripts/update.js"
+    "update": "node scripts/update"
   },
-  "type": "module",
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OnlyFlyer/iconfont-manager.git"

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+      "noEmit": true, // Don't emit; allow Babel to transform files.
+      "outDir": "./xx/",
+      "baseUrl": ".",
+      "experimentalDecorators": true,
+      "noImplicitAny": true,
+      "esModuleInterop": true,
+      "allowJs": true,
+      "module": "commonjs",
+      "target": "es5",
+      "lib": ["ES2020", "DOM"],
+      "jsx": "react",
+      "allowSyntheticDefaultImports": true,
+      "importHelpers": true,
+      "skipLibCheck": true
+  },
+  "compileOnSave": true,
+  "include": ["./index.ts", "./scripts/*"],
+}
